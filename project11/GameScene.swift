@@ -17,11 +17,18 @@ class GameScene: SKScene {
         addChild(background)
         
         physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
-        makeBouncer(at: CGPoint(x: 0, y: 0))
-        makeBouncer(at: CGPoint(x: 256, y: 0))
-        makeBouncer(at: CGPoint(x: 512, y: 0))
-        makeBouncer(at: CGPoint(x: 768, y: 0))
-        makeBouncer(at: CGPoint(x: 1024, y: 0))
+        
+        makeBouncer(at: CGPoint(x: 0, y: 30))
+        makeBouncer(at: CGPoint(x: 256, y: 30))
+        makeBouncer(at: CGPoint(x: 512, y: 30))
+        makeBouncer(at: CGPoint(x: 768, y: 30))
+        makeBouncer(at: CGPoint(x: 1024, y: 30))
+        
+        makeSlot(at: CGPoint(x: 128, y: 30), isGood: true)
+        makeSlot(at: CGPoint(x: 384, y: 30), isGood: false)
+        makeSlot(at: CGPoint(x: 640, y: 30), isGood: true)
+        makeSlot(at: CGPoint(x: 896, y: 30), isGood: false)
+
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -41,5 +48,27 @@ class GameScene: SKScene {
         bouncer.physicsBody = SKPhysicsBody(circleOfRadius: bouncer.size.width/2)
         bouncer.physicsBody?.isDynamic = false
         addChild(bouncer)
+    }
+    
+    func makeSlot(at position: CGPoint, isGood: Bool) {
+        var slotBase: SKSpriteNode
+        var slotGlow: SKSpriteNode
+        
+        if isGood {
+            slotBase = SKSpriteNode(imageNamed: "slotBaseGood")
+            slotGlow = SKSpriteNode(imageNamed: "slotGlowGood")
+        } else {
+            slotBase = SKSpriteNode(imageNamed: "slotBaseBad")
+            slotGlow = SKSpriteNode(imageNamed: "slotGlowBad")
+        }
+        
+        slotBase.position = position
+        slotGlow.position = position
+        addChild(slotBase)
+        addChild(slotGlow)
+        
+        let spin = SKAction.rotate(byAngle: .pi, duration: 10)
+        let spinForever = SKAction.repeatForever(spin)
+        slotGlow.run(spinForever)
     }
 }
