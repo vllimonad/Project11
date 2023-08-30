@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B5EC07F2A9F679700305D14 /* FireParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2B5EC07E2A9F679700305D14 /* FireParticles.sks */; };
 		2BDF85532A9B6FE0006A43B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDF85522A9B6FE0006A43B7 /* AppDelegate.swift */; };
 		2BDF85552A9B6FE0006A43B7 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2BDF85542A9B6FE0006A43B7 /* GameScene.sks */; };
 		2BDF85592A9B6FE0006A43B7 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDF85582A9B6FE0006A43B7 /* GameScene.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B5EC07E2A9F679700305D14 /* FireParticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = FireParticles.sks; path = Assets.xcassets/FireParticles.dataset/FireParticles.sks; sourceTree = "<group>"; };
 		2BDF854F2A9B6FE0006A43B7 /* project11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = project11.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BDF85522A9B6FE0006A43B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BDF85542A9B6FE0006A43B7 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				2BDF855C2A9B6FE0006A43B7 /* Main.storyboard */,
 				2BDF855F2A9B6FE1006A43B7 /* Assets.xcassets */,
 				2BDF85612A9B6FE1006A43B7 /* LaunchScreen.storyboard */,
+				2B5EC07E2A9F679700305D14 /* FireParticles.sks */,
 			);
 			path = project11;
 			sourceTree = "<group>";
@@ -128,6 +131,7 @@
 			files = (
 				2BDF855E2A9B6FE0006A43B7 /* Main.storyboard in Resources */,
 				2BDF85552A9B6FE0006A43B7 /* GameScene.sks in Resources */,
+				2B5EC07F2A9F679700305D14 /* FireParticles.sks in Resources */,
 				2BDF85602A9B6FE1006A43B7 /* Assets.xcassets in Resources */,
 				2BDF85632A9B6FE1006A43B7 /* LaunchScreen.storyboard in Resources */,
 			);
